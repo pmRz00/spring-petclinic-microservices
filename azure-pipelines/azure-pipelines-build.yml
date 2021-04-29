@@ -4,7 +4,7 @@
 
 # https://aka.ms/yaml
 
-name: Build on Azure Pipelines
+name: Build
 
 trigger:
   branches:
