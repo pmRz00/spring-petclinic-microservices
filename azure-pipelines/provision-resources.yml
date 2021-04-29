@@ -27,7 +27,7 @@ steps:
 
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'Internal Consumption tostille(7d5e75b2-656e-4a96-b12f-24e2e79a8279)'
+    azureSubscription: $(SERVICE_CONNECTION_NAME)
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
@@ -41,7 +41,7 @@ steps:
   name: configure_mysql
   displayName: Configure MySQL
   inputs:
-    azureSubscription: 'Internal Consumption tostille(7d5e75b2-656e-4a96-b12f-24e2e79a8279)'
+    azureSubscription: $(SERVICE_CONNECTION_NAME)
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |  
@@ -73,7 +73,7 @@ steps:
   name: db_init_script
   displayName: Run DB Init Script
   inputs:
-    azureSubscription: 'Internal Consumption tostille(7d5e75b2-656e-4a96-b12f-24e2e79a8279)'
+    azureSubscription: $(SERVICE_CONNECTION_NAME)
     ServerName: '$(MYSQL_HOST)'
     SqlUsername: '$(MYSQL_USERNAME)'
     SqlPassword: '$(MYSQL_PASSWORD)'
@@ -86,7 +86,7 @@ steps:
   name: post_init_mysql_config
   displayName: Configure MySQL Post-Init
   inputs:
-    azureSubscription: 'Internal Consumption tostille(7d5e75b2-656e-4a96-b12f-24e2e79a8279)'
+    azureSubscription: $(SERVICE_CONNECTION_NAME)
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |  
@@ -100,7 +100,7 @@ steps:
   name: configure_azure_spring_cloud
   displayName: Configure Azure Spring Cloud
   inputs:
-    azureSubscription: 'Internal Consumption tostille(7d5e75b2-656e-4a96-b12f-24e2e79a8279)'
+    azureSubscription: $(SERVICE_CONNECTION_NAME)
     scriptType: 'bash'
     scriptLocation: 'scriptPath'
     scriptPath: 'azure-pipelines/setup-azure-spring-cloud.sh'
