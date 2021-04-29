@@ -10,7 +10,7 @@ variables:
 
 parameters:
 - name: location
-  default: westus2
+  default: westeurope
 
 trigger:
   branches:
