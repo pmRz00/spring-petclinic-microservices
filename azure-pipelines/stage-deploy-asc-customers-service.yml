@@ -21,7 +21,7 @@ pool:
 resources:
   pipelines:
   - pipeline: build_from_github
-    source: Build from GitHub
+    source: Build
     trigger: none
 
 stages: 
