@@ -9,6 +9,7 @@ parameters:
 - name: resource_group
   default: $(RESOURCE_GROUP)
 - name: application_name
+  default: "api-gateway"
 - name: service_connection_name
   default: $(SERVICE_CONNECTION_NAME)
   
